@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <link rel="stylesheet" href="slarn_signup.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -12,16 +12,16 @@
         <form action="">
             <h1>Sign Up</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="Username" name="name" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="email" name="email" required>
                 </div>
                 <div class="input-box">
-                    <input type="Password" placeholder="Password" required>
+                    <input type="Password" placeholder="Password" name="password" required>
                 </div>
                 <div class="input-box">
-                    <input type="Password" placeholder="Confirm Password" required>
+                    <input type="Password" placeholder="Confirm Password" name="confirm-password" required>
                 </div>
 
                 <div class="Terms_Conditions">
@@ -32,7 +32,7 @@
 
                 <div class="register-link">
                     <p>Already a member?
-                        <a href="#">Login Here</a>
+                        <a href="login">Login Here</a>
                     </p>
                 </div>
         </form>
